@@ -32,8 +32,4 @@ public class OrderMovieService {
         return orderMovieRepository.findByCustomerId(id);
     }
 
-    public List<OrderMovie> findByMovieId(Long id) {
-        return orderMovieRepository.findByMoviesId(id);
-    }
-
 }

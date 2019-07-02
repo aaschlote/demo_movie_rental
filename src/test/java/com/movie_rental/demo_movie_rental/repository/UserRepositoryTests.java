@@ -1,4 +1,4 @@
-package com.movie_rental.demo_movie_rental;
+package com.movie_rental.demo_movie_rental.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

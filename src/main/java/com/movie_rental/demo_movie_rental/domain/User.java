@@ -37,5 +37,5 @@ public class User implements Serializable {
 
     @OneToMany(mappedBy = "customer")
     @Getter(onMethod = @__({@JsonIgnore}))
-    private List<OrderMovie> ordersMovies;
+    private List<OrderMovie> ordersMovie;
 }

@@ -9,7 +9,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity(name = "order_movie")
 @Getter
@@ -40,10 +42,10 @@ public class OrderMovie implements Serializable {
     @JoinColumn(name = "customer_id", nullable = false)
     private User customer;
 
-    @ManyToOne
-    @JoinColumn(name = "movie_id", nullable = false)
-    @Getter(onMethod = @__({@JsonIgnore}))
-    private Movies movies;
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            mappedBy = "orderMovie")
+    private List<OrderMovieLines> ordersMoviesLines = new ArrayList<OrderMovieLines>();
 
 
 }

@@ -11,6 +11,4 @@ public interface OrderMovieRepository  extends JpaRepository<OrderMovie,Long> {
 
     List<OrderMovie> findByCustomerId(Long id);
 
-    List<OrderMovie> findByMoviesId(Long id);
-
 }
